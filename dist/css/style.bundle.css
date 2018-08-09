@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);html {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  font-family: "Roboto"; }
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.title {
+  font-size: 48px;
+  color: white; }
+
+.popup-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center; }
+
+.popup-element {
+  width: 200px;
+  height: 100px;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin: 20px; }
+  .popup-element:hover {
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+    border-radius: 20px;
+    cursor: pointer; }
+  .popup-element:active {
+    background-color: gray; }
+
+.popup-closeIcon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: 10; }
+
+.modal {
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none; }
+  .modal.open {
+    transform: translate(-50%, -50%);
+    width: 630px !important;
+    height: 200px !important;
+    top: 50% !important;
+    left: 50% !important; }
+
+.modal-content {
+  font-size: 36px;
+  opacity: 0;
+  text-align: center;
+  transition: opacity .4s ease;
+  visibility: hidden; }
+  .modal-content.open {
+    opacity: 1;
+    visibility: visible; }
+
+.modal-bg {
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.5);
+  transition: opacity .4s ease; }
+  .modal-bg.open {
+    opacity: 1; }
